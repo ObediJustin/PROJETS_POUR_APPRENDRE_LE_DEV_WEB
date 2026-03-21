@@ -31,7 +31,7 @@ header {
 }
 ul {
     display: flex;
-    gap: 8rem;
+    gap: 4rem;
     list-style: none;
 }
 
@@ -43,4 +43,60 @@ ul a {
 ul a:hover{
     text-decoration: underline rgb(209, 56, 56);
     color: rgb(255, 255, 2);
+}
+main{
+    text-align: center;
+    padding: 20px;
+}
+/* Burger */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: auto;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 2px 0;
+  transition: 0.3s ease;
+}
+
+/* Animation en X */
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .burger {
+    display: flex;
+  }
+    ul {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: #0c151b;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 30px;
+    gap: 22px;
+    transition: 0.4s ease;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    z-index: 1000;
+  }
 }
