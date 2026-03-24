@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do App__ObjusCode</title>
 </head>
+
 <body>
-    
+    <div class="todo-card">
+        <div class="todo-header">
+            <h1>Ma Todo list</h1>
+            <div class="sub">Organisez vos tâches - sauvegarde automatique</div>
+        </div>
+
+        <div class="add-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Ajouter une tâche..." autocomplete="off" />
+                <button id="addBtn"> + Ajouter</button>
+            </div>
+
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Toutes</button>
+                <button class="filter-btn" data-filter="active">Actives</button>
+                <button class="filter-btn" data-filter="completed">Terminées</button>
+            </div>
+            
+            <div class="tasks-container">
+                <ul class="task-list" id="tasklist">
+                    <!-- Les tâches seront ajoutées ici dynamiquement -->
+                </ul>
+            </div>
+
+        </div>
+    </div>
 </body>
+
 </html>
